@@ -25,11 +25,9 @@ export function* loadPokemonsList(/* actions */) {
 
 export function* loadOnePokemon(action) {
   const { url, index } = action;
-  debugger;
 
   try {
     const response = yield call(getOnePokemonReq, url);
-    debugger;
 
     yield put({
       type: LOAD_ONE_POKEMON_SUCCESS,
